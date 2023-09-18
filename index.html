@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap css  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <!-- fontawsome css  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Random User Api</title>
+  </head>
+
+  <body>
+    <div class="wrapper bg-dark min-vh-100 text-light">
+      <div class="container">
+        <!-- title  -->
+        <div class="row">
+          <div class="col">
+            <h1 class="text-center mt-5">My Contact List</h1>
+          </div>
+        </div>
+        <hr />
+
+        <!-- search and filter -->
+
+        <div class="row g-2">
+          <div class="col">
+            <input
+              id="search"
+              type="text"
+              class="form-control"
+              placeholder="search by name ..."
+
+            />
+          </div>
+          <div class="col-md text-end">
+            <!-- select.form-control>option*3  -->
+            <select class="form-control" onchange="handleOnGenderSelect(this)">
+              <option value="">-- Select Gender --</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- user cards  -->
+        <div class="row mt-4">
+          <div class="col">
+            <p>
+              <span id="count">10</span>
+              User(s) found!
+            </p>
+
+            <div
+              id="list"
+              class="d-flex flex-wrap justify-content-between gap-2"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
